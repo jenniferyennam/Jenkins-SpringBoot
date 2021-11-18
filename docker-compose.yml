@@ -1,0 +1,12 @@
+version: '20.10.7'
+
+services:
+  Jenkins-springboot-container:
+    image: Jenkins-spring-boot-docker-compose:1
+    build:
+      context: ./
+      dockerfile: Dockerfile
+    volumes:
+      - /data/Jenkins-springboot-container
+    ports:
+      - "8080-8100:8080"
